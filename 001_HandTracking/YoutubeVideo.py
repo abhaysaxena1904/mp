@@ -11,14 +11,14 @@ from vidgear.gears import CamGear
 url = "https://www.youtube.com/watch?v=Jd4AX3K5TPE&ab_channel=AajTak"
 # url = "https://www.youtube.com/shorts/JCztjGKg7Ms"
 
-# video = pafy.new(url)
-# best = video.getbest(preftype="mp4")
+video = pafy.new(url)
+best = video.getbest(preftype="mp4")
 
 options = {"STREAM_RESOLUTION": "240", "CAP_PROP_FRAME_WIDTH":50, "CAP_PROP_FRAME_HEIGHT":30}
 stream = CamGear(source=url, stream_mode = True, **options).start() # YouTube Video URL as input
 
 
-# cap = cv2.VideoCapture(best.url)
+cap = cv2.VideoCapture(best.url)
 
 # pTime = 0
 # cTime = 0

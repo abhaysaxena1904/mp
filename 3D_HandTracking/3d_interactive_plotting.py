@@ -44,7 +44,10 @@ warnings.filterwarnings("ignore", category = UserWarning, module = "matplotlib")
 from IPython import get_ipython
 get_ipython().run_line_magic('matplotlib', 'qt')
 """
-%matplotlib.qt
+# %matplotlib.qt
+from mpl_toolkits.mplot3d import Axes3D
+import matplotlib.pyplot as plt
+import numpy as np
 
 from mpl_toolkits import mplot3d
 
